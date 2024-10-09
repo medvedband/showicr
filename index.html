@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Show Interactivo - Gradiente Animado</title>
+    <!-- Añadir la fuente Roboto desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body, html {
             margin: 0;
@@ -14,7 +16,7 @@
             background: linear-gradient(90deg, #8A2BE2, #0000FF, #FFFFFF); /* Gradiente inicial */
             background-size: 300% 300%; /* Gradiente amplio */
             animation: gradienteOscilacion 10s ease infinite; /* Animación del fondo */
-            font-family: Helvetica, Arial, sans-serif; /* Fuente Helvetica */
+            font-family: 'Roboto', sans-serif; /* Usando Roboto en lugar de Helvetica */
             position: relative; /* Para posicionar los botones relativos a la pantalla */
         }
 
@@ -75,8 +77,8 @@
         /* Estilos para el botón "Seguir en Instagram" */
         .btn-follow {
             position: absolute; /* Posicionarlo en el costado */
-            right: -100%; /* Al borde derecho, ajustado con 100px */
-            top: 50%; /* Centrado verticalmente */
+            right: 0; /* Alinearlo con el borde derecho */
+            top: 50%; /* Centrar verticalmente */
             transform: translateY(-50%) rotate(90deg); /* Girar 90 grados y centrar */
             padding: 10px 20px;
             font-size: 16px;
@@ -94,7 +96,7 @@
             color: black; /* Texto negro */
         }
 
-        /* Estilos responsivos */
+        /* Estilos responsivos para móviles */
         @media (max-width: 600px) {
             .centered-text {
                 font-size: 24px; /* Tamaño de fuente más pequeño para móviles */
@@ -105,9 +107,11 @@
                 padding: 8px 15px; /* Ajustar el padding */
             }
 
+            /* Botón "Seguir en Instagram" ajustado para móviles */
             .btn-follow {
-                right: 10px; /* Ajustar la distancia al borde derecho en móviles */
-                top: 50%; /* Mantener centrado verticalmente */
+                right: 0; /* Mantener pegado al borde derecho */
+                top: 50%; /* Centrar verticalmente */
+                transform: translateY(-50%) rotate(90deg); /* Girar 90 grados y centrar */
             }
         }
     </style>
