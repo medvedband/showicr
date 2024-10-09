@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Interactivo - Gradiente Animado</title>
+    <style>
+        body, html {
+            margin: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(90deg, #8A2BE2, #0000FF, #FFFFFF); /* Gradiente inicial */
+            background-size: 300% 300%; /* Gradiente amplio */
+            animation: gradienteOscilacion 10s ease infinite; /* Animación del fondo */
+            font-family: Arial, sans-serif;
+            position: relative; /* Para posicionar los botones relativos a la pantalla */
+        }
+
+        @keyframes gradienteOscilacion {
+            0% {
+                background-position: 0% 50%; /* Comienza en morado */
+            }
+            50% {
+                background-position: 100% 50%; /* Azul y luego blanco */
+            }
+            100% {
+                background-position: 0% 50%; /* Vuelve al morado */
+            }
+        }
+
+        @keyframes textoOscilacion {
+            0%, 100% {
+                color: white; /* Texto blanco cuando el fondo es oscuro (morado) */
+            }
+            50% {
+                color: black; /* Texto negro cuando el fondo es blanco */
+            }
+        }
+
+        .fullscreen {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative; /* Para permitir posicionar los botones */
+            padding: 20px; /* Añadir un poco de padding */
+        }
+
+        .centered-text {
+            font-size: 28px; /* Ajustar tamaño de fuente para móviles */
+            line-height: 1.5;
+            animation: textoOscilacion 10s ease infinite; /* Animación de color del texto */
+        }
+
+        /* Estilos para el botón "Escuchar" */
+        .btn-listen {
+            position: absolute; /* Posicionarlo en la parte inferior */
+            bottom: 20px; /* Margen inferior */
+            left: 50%; /* Centrar horizontalmente */
+            transform: translateX(-50%); /* Ajustar para centrar */
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Estilos para el botón "Seguir en Instagram" */
+        .btn-follow {
+            position: absolute; /* Posicionarlo en el costado */
+            right: 100; /* Al borde derecho */
+            top: 50%; /* Centrado verticalmente */
+            transform: translateY(-50%) rotate(90deg); /* Girar 90 grados y centrar */
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            /* Añadir un pequeño margen para el botón de Instagram */
+            margin-right: 10px; /* Asegúrate de que no haya margen */
+        }
+
+        /* Cambio de color en hover */
+        .btn-listen:hover, .btn-follow:hover {
+            background-color: rgba(255, 255, 255, 0.7); /* Cambia a blanco al pasar el mouse */
+            color: black; /* Texto negro */
+        }
+
+        /* Estilos responsivos */
+        @media (max-width: 600px) {
+            .centered-text {
+                font-size: 24px; /* Tamaño de fuente más pequeño para móviles */
+            }
+
+            .btn-listen, .btn-follow {
+                font-size: 14px; /* Tamaño de fuente más pequeño para botones */
+                padding: 8px 15px; /* Ajustar el padding */
+            }
+
+            .btn-follow {
+                right: 5px; /* Mover más cerca del borde derecho */
+                top: 50%; /* Mantener centrado verticalmente */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="fullscreen">
+        <div class="centered-text">
+            Vendame para sanar.<br>
+            No para cegarme.<br>
+            <br>
+            Vendame para sanar.<br>
+            No para cegarme.<br>
+            <br>
+            Guíame con tus afectos<br>
+            Y no veré la sombra<br>
+            <br>
+            <br>
+            MEDVED - CIEGOS
+        </div>
+
+        <!-- Botón "Escuchar" -->
+        <a href="https://hypeddit.com/05xnqa" target="_blank">
+            <button class="btn-listen">Escuchar</button>
+        </a>
+
+        <!-- Botón "Seguir en Instagram" -->
+        <a href="https://www.instagram.com/medvedband" target="_blank">
+            <button class="btn-follow">Seguir en Instagram</button>
+        </a>
+    </div>
+</body>
+</html>
