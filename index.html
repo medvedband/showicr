@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Show Interactivo - Gradiente Animado</title>
-    <!-- Añadir la fuente Roboto desde Google Fonts -->
+    
+    <!-- Cargar la fuente Roboto Serif desde Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+
     <style>
         body, html {
             margin: 0;
@@ -19,7 +20,7 @@
             background: linear-gradient(90deg, #8A2BE2, #0000FF, #FFFFFF); /* Gradiente inicial */
             background-size: 300% 300%; /* Gradiente amplio */
             animation: gradienteOscilacion 10s ease infinite; /* Animación del fondo */
-            font-family: 'Roboto', sans-serif; /* Usando Roboto en lugar de Helvetica */
+            font-family: 'Roboto Serif', serif; /* Aplicando Roboto Serif */
             position: relative; /* Para posicionar los botones relativos a la pantalla */
         }
 
@@ -80,9 +81,9 @@
         /* Estilos para el botón "Seguir en Instagram" */
         .btn-follow {
             position: absolute; /* Posicionarlo en el costado */
-            bottom: 20px; /* En la parte inferior */
-            left: 20px; /* Al borde izquierdo */
-            transform: rotate(90deg); /* Girar 90 grados */
+            top: 10px; /* Alinearlo con el borde superior */
+            left: 50%; /* Centrar horizontalmente */
+            transform: translateX(-50%) rotate(90deg); /* Girar 90 grados y centrar */
             padding: 10px 20px;
             font-size: 16px;
             color: white;
@@ -99,7 +100,7 @@
             color: black; /* Texto negro */
         }
 
-        /* Estilos responsivos para móviles */
+        /* Estilos responsivos */
         @media (max-width: 600px) {
             .centered-text {
                 font-size: 24px; /* Tamaño de fuente más pequeño para móviles */
@@ -110,11 +111,9 @@
                 padding: 8px 15px; /* Ajustar el padding */
             }
 
-            /* Botón "Seguir en Instagram" ajustado para móviles */
             .btn-follow {
-                right: 0; /* Mantener pegado al borde derecho */
-                top: 50%; /* Centrar verticalmente */
-                transform: translateY(-50%) rotate(90deg); /* Girar 90 grados y centrar */
+                top: 5px; /* Ajustar la distancia al borde en móviles */
+                left: 50%; /* Centrarlo horizontalmente en móviles */
             }
         }
     </style>
