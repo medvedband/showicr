@@ -14,7 +14,7 @@
             background: linear-gradient(90deg, #8A2BE2, #0000FF, #FFFFFF); /* Gradiente inicial */
             background-size: 300% 300%; /* Gradiente amplio */
             animation: gradienteOscilacion 10s ease infinite; /* Animación del fondo */
-            font-family: Arial, sans-serif;
+            font-family: Helvetica, Arial, sans-serif; /* Fuente Helvetica */
             position: relative; /* Para posicionar los botones relativos a la pantalla */
         }
 
@@ -75,7 +75,7 @@
         /* Estilos para el botón "Seguir en Instagram" */
         .btn-follow {
             position: absolute; /* Posicionarlo en el costado */
-            right: 200; /* Al borde derecho */
+            right: 100px; /* Al borde derecho, ajustado con 100px */
             top: 50%; /* Centrado verticalmente */
             transform: translateY(-50%) rotate(90deg); /* Girar 90 grados y centrar */
             padding: 10px 20px;
@@ -86,8 +86,6 @@
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease;
-            /* Añadir un pequeño margen para el botón de Instagram */
-            margin-right: 10px; /* Asegúrate de que no haya margen */
         }
 
         /* Cambio de color en hover */
@@ -108,7 +106,7 @@
             }
 
             .btn-follow {
-                right: 5px; /* Mover más cerca del borde derecho */
+                right: 10px; /* Ajustar la distancia al borde derecho en móviles */
                 top: 50%; /* Mantener centrado verticalmente */
             }
         }
@@ -117,10 +115,10 @@
 <body>
     <div class="fullscreen">
         <div class="centered-text">
-            Vendame para sanar.<br>
+            Véndame para sanar.<br>
             No para cegarme.<br>
             <br>
-            Vendame para sanar.<br>
+            Véndame para sanar.<br>
             No para cegarme.<br>
             <br>
             Guíame con tus afectos<br>
